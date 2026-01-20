@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StarTypeDef" load_steps=2 format=3 uid="uid://b3bvgc4kij3i6"]
+
+[ext_resource type="Script" uid="uid://dgj0008hblp3h" path="res://sim/data/star_type_def.gd" id="1_02noe"]
+
+[resource]
+script = ExtResource("1_02noe")
+type_id = 0
+display_name = "Red Star"
+production_range = Vector2i(1, 4)
+tint = Color(0.8355809, 0, 0.017939582, 1)
+metadata/_custom_type_script = "uid://dgj0008hblp3h"

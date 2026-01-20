@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://3cnv5sbv4bqr"]
+
+[ext_resource type="Script" uid="uid://u6ho000k7055" path="res://ui/menus/mainmenu.gd" id="1_cmhrf"]
+
+[sub_resource type="Gradient" id="Gradient_cmhrf"]
+colors = PackedColorArray(0.1148968, 0.11489681, 0.1148968, 1, 0.22670749, 0.22670749, 0.22670746, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d2nv2"]
+gradient = SubResource("Gradient_cmhrf")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wgsso"]
+font_size = 40
+
+[node name="Mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmhrf")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_d2nv2")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title_Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Dominion"
+label_settings = SubResource("LabelSettings_wgsso")
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"

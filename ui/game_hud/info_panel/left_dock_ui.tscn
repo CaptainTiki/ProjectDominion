@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxcly0n8px4md"]
+
+[ext_resource type="Script" uid="uid://calls83qf0ktj" path="res://ui/game_hud/info_panel/left_dock_ui.gd" id="1_leftdock"]
+[ext_resource type="PackedScene" uid="uid://ctd7fsy48g520" path="res://ui/game_hud/info_panel/star_info_ui.tscn" id="2_starinfo"]
+[ext_resource type="PackedScene" uid="uid://b04quf5nq1eiu" path="res://ui/game_hud/info_panel/fleet_info_ui.tscn" id="3_fleetinfo"]
+
+[node name="LeftDockUI" type="PanelContainer"]
+size_flags_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_leftdock")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="StarInfoUI" parent="VBoxContainer" instance=ExtResource("2_starinfo")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FleetInfoUI" parent="VBoxContainer" instance=ExtResource("3_fleetinfo")]
+unique_name_in_owner = true
+layout_mode = 2

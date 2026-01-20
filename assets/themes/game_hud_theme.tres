@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dm30vsenylmnf"]
+
+[ext_resource type="Texture2D" uid="uid://dkw054iweyq4" path="res://assets/textures/panel_9slice/9slice.png" id="1_dvqdf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnykq"]
+texture = ExtResource("1_dvqdf")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[resource]
+Label/colors/font_color = Color(0.7204674, 0.7204675, 0.7204674, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_wnykq")

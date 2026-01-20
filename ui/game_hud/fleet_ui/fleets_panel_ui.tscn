@@ -1,0 +1,116 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dl4u014fwg0po" path="res://ui/game_hud/fleet_ui/fleets_panel_ui.gd" id="1_fleets_panel"]
+
+[node name="FleetsPanelUI" type="PanelContainer"]
+script = ExtResource("1_fleets_panel")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -260.0
+offset_right = 380.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBox/Header"]
+layout_mode = 2
+text = "Fleets"
+
+[node name="HeaderSpacer" type="Control" parent="VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseBtn" type="Button" parent="VBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "X"
+
+[node name="ContextLabel" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select a star to manage fleets."
+
+[node name="ErrorLabel" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+
+[node name="Body" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftCol" type="VBoxContainer" parent="VBox/Body"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GarrisonLabel" type="Label" parent="VBox/Body/LeftCol"]
+layout_mode = 2
+text = "Garrison"
+
+[node name="GarrisonList" type="ItemList" parent="VBox/Body/LeftCol"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 150)
+
+[node name="AddButtons" type="HBoxContainer" parent="VBox/Body/LeftCol"]
+layout_mode = 2
+
+[node name="AddOneBtn" type="Button" parent="VBox/Body/LeftCol/AddButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+1 -> Fleet"
+
+[node name="AddFiveBtn" type="Button" parent="VBox/Body/LeftCol/AddButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+5 -> Fleet"
+
+[node name="RightCol" type="VBoxContainer" parent="VBox/Body"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FleetsRow" type="HBoxContainer" parent="VBox/Body/RightCol"]
+layout_mode = 2
+
+[node name="FleetsLabel" type="Label" parent="VBox/Body/RightCol/FleetsRow"]
+layout_mode = 2
+text = "Fleets"
+
+[node name="FleetsSpacer" type="Control" parent="VBox/Body/RightCol/FleetsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CreateFleetBtn" type="Button" parent="VBox/Body/RightCol/FleetsRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create"
+
+[node name="FleetsList" type="ItemList" parent="VBox/Body/RightCol"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 90)
+
+[node name="FleetShipsLabel" type="Label" parent="VBox/Body/RightCol"]
+layout_mode = 2
+text = "Selected Fleet Ships"
+
+[node name="FleetShipsList" type="ItemList" parent="VBox/Body/RightCol"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 90)

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StarTypeDef" load_steps=2 format=3 uid="uid://seh8qby71djn"]
+
+[ext_resource type="Script" uid="uid://dgj0008hblp3h" path="res://sim/data/star_type_def.gd" id="1_l2fyv"]
+
+[resource]
+script = ExtResource("1_l2fyv")
+type_id = 3
+display_name = "Neutron Star"
+weight = 0.15
+credits_range = Vector2i(1, 2)
+research_range = Vector2i(3, 5)
+production_range = Vector2i(2, 4)
+tint = Color(0.5598605, 0.7999973, 0.8572657, 1)
+metadata/_custom_type_script = "uid://dgj0008hblp3h"

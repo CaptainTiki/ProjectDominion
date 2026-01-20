@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/cargo_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="CargoEffect" id="CargoEffect_1"]
+script = ExtResource("2")
+role = 1
+capacity = 0
+colonists_delivered = 1200000
+transfer_rate = 0
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_COLONY_ARK_XL"
+display_name = "Colony Ark (1.2M)"
+slot_type = 3
+min_hull_size = 2
+production_cost = 12
+credit_cost = 180
+mass_delta = 1.2
+signature_delta = 0.4
+effect = SubResource("CargoEffect_1")
+description = "Massive colony payload for rapid expansion."

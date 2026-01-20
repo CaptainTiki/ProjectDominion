@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/sensor_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="SensorEffect" id="SensorEffect_1"]
+script = ExtResource("2")
+passive_range_bonus = 2
+fleet_detail_tier_bonus = 1
+scan_range_bonus = 2
+scan_speed_bonus = 1
+enables_deep_scan = true
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_SCAN_ARRAY"
+display_name = "Scan Array"
+slot_type = 2
+production_cost = 3
+credit_cost = 35
+mass_delta = 0.2
+signature_delta = 0.1
+effect = SubResource("SensorEffect_1")
+description = "Enables strategic scanning and deeper fleet intel."

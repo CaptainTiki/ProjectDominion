@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ShipDesignDef" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://sim/data/ship_design_def.gd" id="1"]
+[ext_resource type="Resource" path="res://sim/content/hulls/hull_medium.tres" id="2"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_plating.tres" id="3"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_sensor.tres" id="4"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_colony_pod_small.tres" id="5"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_drive.tres" id="6"]
+
+[resource]
+script = ExtResource("1")
+id = &"COLONY"
+display_name = "Colony Ship"
+hull = ExtResource("2")
+modules = Array[Resource]([ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")])
+hull_id = &"HULL_MEDIUM"
+module_ids = Array[StringName]([&"MOD_PLATING", &"MOD_STANDARD_SENSOR", &"MOD_COLONY_POD_SMALL", &"MOD_STANDARD_DRIVE"])
+description = "Expansion vessel carrying a colony payload."

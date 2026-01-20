@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StarTypeDef" load_steps=2 format=3 uid="uid://bqcxcu02ads2j"]
+
+[ext_resource type="Script" uid="uid://dgj0008hblp3h" path="res://sim/data/star_type_def.gd" id="1_2ga8s"]
+
+[resource]
+script = ExtResource("1_2ga8s")
+credits_range = Vector2i(2, 4)
+research_range = Vector2i(0, 1)
+production_range = Vector2i(1, 1)
+tint = Color(1, 1, 0.43146813, 1)
+metadata/_custom_type_script = "uid://dgj0008hblp3h"

@@ -1,0 +1,153 @@
+[gd_scene load_steps=4 format=3 uid="uid://isn64b5gptwv"]
+
+[ext_resource type="Script" uid="uid://bn23j0uh5s6ay" path="res://ui/menus/new_game_menu.gd" id="1_qfiju"]
+
+[sub_resource type="Gradient" id="Gradient_v3d21"]
+colors = PackedColorArray(0.1148968, 0.11489681, 0.1148968, 1, 0.22670749, 0.22670749, 0.22670746, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qfiju"]
+gradient = SubResource("Gradient_v3d21")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[node name="NewGameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qfiju")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qfiju")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SettingsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.75
+
+[node name="LeftSettings" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="GalaxySizeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+layout_mode = 2
+text = "Galaxy Size"
+
+[node name="GalaxySize" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StarCountLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+layout_mode = 2
+text = "Star Count"
+
+[node name="StarCount" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FactionCountLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+layout_mode = 2
+text = "Faction Count"
+
+[node name="FactionCount" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SeedLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+layout_mode = 2
+text = "Random Seed"
+
+[node name="RndSeed" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/SettingsContainer/LeftSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Preview_Container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Preview_Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.25
+
+[node name="PreviewTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Preview_Container/PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch_mode = 5
+
+[node name="FactionSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Factions_Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/FactionSettings"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Factions"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/FactionSettings"]
+clip_contents = false
+layout_mode = 2
+
+[node name="FactionList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/FactionSettings/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="RandomizeBtn" type="Button" parent="MarginContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Randomize"
+
+[node name="GenerateMapBtn" type="Button" parent="MarginContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GenerateMap"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ButtonsContainer"]
+layout_mode = 2
+
+[node name="CancelBtn" type="Button" parent="MarginContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cancel"
+
+[node name="AcceptBtn" type="Button" parent="MarginContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Accept"

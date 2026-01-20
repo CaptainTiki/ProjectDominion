@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShipDef" load_steps=2 format=3 uid="uid://cm80t1saa3g6u"]
+
+[ext_resource type="Script" uid="uid://y64bq8jkk0h4" path="res://sim/data/ship_def.gd" id="1_3frt6"]
+
+[resource]
+script = ExtResource("1_3frt6")
+production_cost = 5
+credit_cost = 25
+speed = 5
+metadata/_custom_type_script = "uid://y64bq8jkk0h4"

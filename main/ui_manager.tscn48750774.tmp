@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3rupg7whfm6b"]
+
+[ext_resource type="Script" uid="uid://dh78eji7pf4ut" path="res://main/ui_manager.gd" id="1_mfh81"]
+[ext_resource type="PackedScene" path="res://ui/game_hud/top_bar_ui.tscn" id="2_nyu4l"]
+[ext_resource type="Theme" uid="uid://dm30vsenylmnf" path="res://assets/themes/game_hud_theme.tres" id="2_vq56q"]
+[ext_resource type="PackedScene" uid="uid://cxcly0n8px4md" path="res://ui/game_hud/left_dock_ui.tscn" id="3_vq56q"]
+[ext_resource type="PackedScene" uid="uid://khi7wk15y0n2" path="res://ui/game_hud/production_panel_ui.tscn" id="4_prod"]
+[ext_resource type="PackedScene" path="res://ui/game_hud/fleets_panel_ui.tscn" id="5_fleets"]
+
+[node name="UI_Manager" type="CanvasLayer"]
+script = ExtResource("1_mfh81")
+
+[node name="Menus" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScreenEffects" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fade" type="ColorRect" parent="ScreenEffects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="GameHud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("2_vq56q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameHud"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopBarUI" parent="GameHud/VBoxContainer" instance=ExtResource("2_nyu4l")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameHud/VBoxContainer"]
+layout_mode = 2
+
+[node name="LeftDockUI" parent="GameHud/VBoxContainer/HBoxContainer" instance=ExtResource("3_vq56q")]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Spacer" type="Control" parent="GameHud/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProductionPanelUI" parent="GameHud" instance=ExtResource("4_prod")]
+unique_name_in_owner = true
+layout_mode = 1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FleetsPanelUI" parent="GameHud" instance=ExtResource("5_fleets")]
+unique_name_in_owner = true

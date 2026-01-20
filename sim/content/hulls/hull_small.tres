@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="HullDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://sim/data/hull_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"HULL_SMALL"
+display_name = "Small Hull"
+hull_size = 0
+weapon_slots = 1
+armor_slots = 1
+sensor_slots = 1
+cargo_slots = 0
+engine_slots = 1
+production_cost = 3
+credit_cost = 15
+mass = 1.0
+signature = 1.0
+power_output = 0
+hull = 4
+attack = 0
+defense = 0
+speed = 5
+description = "A light frame for scouts and skirmishers."

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TechTypeCatalog" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://sim/data/tech/tech_type_catalog.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+techs = Array[Resource]([])

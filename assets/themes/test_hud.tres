@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://01vond1dx12l"]
+
+[ext_resource type="Texture2D" uid="uid://dkw054iweyq4" path="res://assets/textures/panel_9slice/9slice.png" id="1_gbsof"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ply7i"]
+texture = ExtResource("1_gbsof")
+expand_margin_left = 32.0
+expand_margin_top = 32.0
+expand_margin_right = 32.0
+expand_margin_bottom = 32.0
+
+[resource]
+Label/colors/font_color = Color(0.7204674, 0.7204675, 0.7204674, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_ply7i")

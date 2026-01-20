@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShipDef" load_steps=2 format=3 uid="uid://d0vs3ouytjufl"]
+
+[ext_resource type="Script" uid="uid://y64bq8jkk0h4" path="res://sim/data/ship_def.gd" id="1_chkdc"]
+
+[resource]
+script = ExtResource("1_chkdc")
+id = &"DESTROYER"
+display_name = "Destroyer"
+ship_class = 2
+production_cost = 28
+credit_cost = 52
+hull = 6
+attack = 3
+defense = 2
+speed = 3
+metadata/_custom_type_script = "uid://y64bq8jkk0h4"

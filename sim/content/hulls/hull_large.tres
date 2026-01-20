@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="HullDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://sim/data/hull_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"HULL_LARGE"
+display_name = "Large Hull"
+hull_size = 2
+weapon_slots = 3
+armor_slots = 3
+sensor_slots = 1
+cargo_slots = 1
+engine_slots = 1
+production_cost = 10
+credit_cost = 70
+mass = 3.5
+signature = 3.5
+power_output = 0
+hull = 14
+attack = 0
+defense = 0
+speed = 3
+description = "A heavy warship frame for line combat."

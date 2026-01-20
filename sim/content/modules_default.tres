@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ModuleCatalog" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_catalog.gd" id="1"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_railgun.tres" id="2"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_missile_rack.tres" id="3"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_plating.tres" id="4"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_polychromate.tres" id="5"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_drive.tres" id="6"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_quantum_plasma.tres" id="7"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_sensor.tres" id="8"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_scan_array.tres" id="9"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_cargo.tres" id="10"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_colony_pod_small.tres" id="11"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_colony_ark_xl.tres" id="12"]
+
+[resource]
+script = ExtResource("1")
+modules = Array[Resource]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")])

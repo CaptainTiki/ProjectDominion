@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/engine_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="EngineEffect" id="EngineEffect_1"]
+script = ExtResource("2")
+grid_range_per_turn = 3
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_STANDARD_DRIVE"
+display_name = "Standard Drive"
+slot_type = 4
+production_cost = 1
+credit_cost = 10
+mass_delta = 0.2
+signature_delta = 0.0
+effect = SubResource("EngineEffect_1")
+description = "Reliable interstellar drive."

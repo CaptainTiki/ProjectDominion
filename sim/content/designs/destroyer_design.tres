@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ShipDesignDef" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://sim/data/ship_design_def.gd" id="1"]
+[ext_resource type="Resource" path="res://sim/content/hulls/hull_large.tres" id="2"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_railgun.tres" id="3"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_railgun.tres" id="4"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_missile_rack.tres" id="5"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_polychromate.tres" id="6"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_polychromate.tres" id="7"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_plating.tres" id="8"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_scan_array.tres" id="9"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_cargo.tres" id="10"]
+[ext_resource type="Resource" path="res://sim/content/modules/mod_standard_drive.tres" id="11"]
+
+[resource]
+script = ExtResource("1")
+id = &"DESTROYER"
+display_name = "Destroyer"
+hull = ExtResource("2")
+modules = Array[Resource]([ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11")])
+hull_id = &"HULL_LARGE"
+module_ids = Array[StringName]([&"MOD_RAILGUN", &"MOD_RAILGUN", &"MOD_MISSILE_RACK", &"MOD_POLYCHROMATE", &"MOD_POLYCHROMATE", &"MOD_PLATING", &"MOD_SCAN_ARRAY", &"MOD_STANDARD_CARGO", &"MOD_STANDARD_DRIVE"])
+description = "Heavy escort with improved sensors."

@@ -1,0 +1,211 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5u7kgkv1y5h1"]
+
+[ext_resource type="Script" uid="uid://fwq2ik765ctn" path="res://ui/game_hud/research_ui/research_panel_ui.gd" id="1_t0fuk"]
+[ext_resource type="PackedScene" uid="uid://kq4oe13c0m1r" path="res://ui/game_hud/research_ui/tech_button.tscn" id="2_0cskh"]
+
+[node name="ResearchPanelUI" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -220.0
+offset_right = 340.0
+offset_bottom = 220.0
+mouse_filter = 2
+script = ExtResource("1_t0fuk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+text = "Research"
+
+[node name="Control2" type="Control" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseBtn" type="Button" parent="VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"
+
+[node name="Main" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoPanel" type="PanelContainer" parent="VBoxContainer/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Main/InfoPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Info Panel"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+draw_focus_border = true
+vertical_scroll_mode = 0
+
+[node name="Domains_VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 28
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Physics_Row" type="VBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Domain_Label" type="Label" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Physics"
+
+[node name="Domain_Techs" type="HBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="PH-1" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PH-2" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PH-3" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PH-4" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PH-5" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Physics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MaterialSciences_Row" type="VBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Domain_Label" type="Label" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Materials"
+
+[node name="Domain_Techs" type="HBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="MS-1" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MS-2" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer3" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/MaterialSciences_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Chemistry_Row" type="VBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Domain_Label" type="Label" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Chemistry"
+
+[node name="Domain_Techs" type="HBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="CH-1" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CH-2" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CH-3" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Chemistry_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Mathematics_Row" type="VBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Domain_Label" type="Label" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Mathematics"
+
+[node name="Domain_Techs" type="HBoxContainer" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="MM-1" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MM-2" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row/Domain_Techs" instance=ExtResource("2_0cskh")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer3" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer/Mathematics_Row/Domain_Techs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="VBoxContainer/Main/ScrollContainer/Domains_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3

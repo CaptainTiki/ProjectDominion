@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/cargo_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="CargoEffect" id="CargoEffect_1"]
+script = ExtResource("2")
+role = 0
+capacity = 100
+colonists_delivered = 0
+transfer_rate = 0
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_STANDARD_CARGO"
+display_name = "Cargo Hold"
+slot_type = 3
+production_cost = 1
+credit_cost = 10
+mass_delta = 0.2
+signature_delta = 0.0
+effect = SubResource("CargoEffect_1")
+description = "Basic cargo capacity."

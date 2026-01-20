@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://cyaksad2mmfll"]
+
+[ext_resource type="Script" uid="uid://bd7yh2nw1hx28" path="res://galaxy/galaxy_map.gd" id="1_uw20o"]
+[ext_resource type="Shader" uid="uid://usfp66rh5mh6" path="res://assets/shaders/grid_shader.tres" id="2_cmydt"]
+[ext_resource type="Shader" path="res://assets/shaders/fog_of_war.gdshader" id="2_fog"]
+[ext_resource type="Script" uid="uid://ddorq0mfr4o2n" path="res://galaxy/camera_rig.gd" id="3_kawwm"]
+[ext_resource type="Script" uid="uid://dhe3kvc8avwqx" path="res://galaxy/selection_system.gd" id="4_yntxj"]
+[ext_resource type="Script" path="res://galaxy/fog_of_war.gd" id="5_fog_script"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cmydt"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_kawwm"]
+sky_material = SubResource("ProceduralSkyMaterial_cmydt")
+
+[sub_resource type="Environment" id="Environment_bq8kf"]
+background_mode = 2
+sky = SubResource("Sky_kawwm")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kawwm"]
+render_priority = 0
+shader = ExtResource("2_cmydt")
+shader_parameter/squares_color = Color(0, 0, 0, 0)
+shader_parameter/line_color = Color(0.07764302, 0.19013967, 0.2730015, 0.081)
+shader_parameter/border_thickness = 0.015
+shader_parameter/line_thickness = 0.2
+shader_parameter/grid_cells = 30.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bq8kf"]
+material = SubResource("ShaderMaterial_kawwm")
+size = Vector2(30, 30)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fog"]
+render_priority = 1
+shader = ExtResource("2_fog")
+shader_parameter/unseen_alpha = 0.95
+shader_parameter/explored_alpha = 0.65
+shader_parameter/noise_strength = 0.08
+shader_parameter/noise_speed = 0.35
+shader_parameter/noise_scale = 48.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fog"]
+material = SubResource("ShaderMaterial_fog")
+size = Vector2(30, 30)
+
+[node name="GalaxyMap" type="Node3D"]
+script = ExtResource("1_uw20o")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bq8kf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="GridPlane" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("PlaneMesh_bq8kf")
+
+[node name="FogPlane" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("PlaneMesh_fog")
+script = ExtResource("5_fog_script")
+
+[node name="CameraRig" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_kawwm")
+
+[node name="Pivot" type="Node3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 0.07610996, 0.99709946, 0, -0.99709946, 0.07610996, 0, 0, 0.17873263)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraRig/Pivot"]
+spring_length = 30.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/Pivot/SpringArm3D"]
+unique_name_in_owner = true
+
+[node name="SelectionSystem" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_yntxj")
+
+[node name="StarsRoot" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="FleetsRoot" type="Node3D" parent="."]
+unique_name_in_owner = true

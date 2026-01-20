@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/armor_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="ArmorEffect" id="ArmorEffect_1"]
+script = ExtResource("2")
+armor_bonus = 2
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_POLYCHROMATE"
+display_name = "Poly-Chromate Layer"
+slot_type = 1
+production_cost = 2
+credit_cost = 20
+mass_delta = 0.4
+signature_delta = 0.0
+effect = SubResource("ArmorEffect_1")
+description = "Upgraded layered armor."

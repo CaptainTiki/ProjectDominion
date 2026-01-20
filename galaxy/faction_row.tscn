@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpuixeaamkr7b"]
+
+[ext_resource type="Script" uid="uid://bdiyb1qkm4e16" path="res://galaxy/faction_row.gd" id="1_faction_row"]
+
+[sub_resource type="Gradient" id="Gradient_h3ob7"]
+colors = PackedColorArray(0.1148968, 0.11489681, 0.1148968, 1, 0.22670749, 0.22670749, 0.22670746, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ov02r"]
+gradient = SubResource("Gradient_h3ob7")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[node name="Row" type="HBoxContainer"]
+offset_right = 325.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_faction_row")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Background" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = SubResource("GradientTexture2D_ov02r")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="FactionLabel" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Faction 1"
+
+[node name="Name" type="LineEdit" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Faction 1"
+expand_to_text_length = true
+flat = true
+
+[node name="FactionRow" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="RndBtn" type="Button" parent="MarginContainer/HBoxContainer/FactionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "RND"
+
+[node name="ControlType" type="OptionButton" parent="MarginContainer/HBoxContainer/FactionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorLeft" type="Button" parent="MarginContainer/HBoxContainer/FactionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<"
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/FactionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRight" type="Button" parent="MarginContainer/HBoxContainer/FactionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = ">"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://kq4oe13c0m1r"]
+
+[ext_resource type="Script" uid="uid://bd6rjg6x0nx2c" path="res://ui/game_hud/research_ui/tech_button.gd" id="1_osy0p"]
+
+[sub_resource type="Gradient" id="Gradient_osy0p"]
+offsets = PackedFloat32Array(0, 0.37027708, 1)
+colors = PackedColorArray(0.11858138, 0.11858139, 0.11858136, 1, 0.39308554, 0.39308554, 0.39308533, 1, 0.15127608, 0.15127608, 0.15127608, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rggba"]
+gradient = SubResource("Gradient_osy0p")
+width = 128
+height = 32
+fill_from = Vector2(0.44444445, 0)
+fill_to = Vector2(0.47435898, 1)
+
+[node name="TechButton" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_osy0p")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_rggba")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Tech Name"

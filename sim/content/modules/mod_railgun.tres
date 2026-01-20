@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/weapon_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="WeaponEffect" id="WeaponEffect_1"]
+script = ExtResource("2")
+damage = 2.0
+shots_per_turn = 1
+range_tiles = 2
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_RAILGUN"
+display_name = "Railgun"
+slot_type = 0
+production_cost = 2
+credit_cost = 20
+mass_delta = 0.2
+signature_delta = 0.1
+effect = SubResource("WeaponEffect_1")
+description = "Kinetic punch at modest range."

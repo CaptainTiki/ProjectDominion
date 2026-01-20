@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarTypeCatalog" load_steps=7 format=3 uid="uid://b5oe0a8fqre1"]
+
+[ext_resource type="Script" uid="uid://dauw4trs2xa54" path="res://sim/data/star_type_catalog.gd" id="1_c7ieo"]
+[ext_resource type="Script" uid="uid://dgj0008hblp3h" path="res://sim/data/star_type_def.gd" id="2_1lkpu"]
+[ext_resource type="Resource" uid="uid://c0ee43by0f844" path="res://sim/content/stars/blue_star.tres" id="3_mvyu5"]
+[ext_resource type="Resource" uid="uid://seh8qby71djn" path="res://sim/content/stars/neutron_star.tres" id="4_nob7x"]
+[ext_resource type="Resource" uid="uid://b3bvgc4kij3i6" path="res://sim/content/stars/red_star.tres" id="5_efeih"]
+[ext_resource type="Resource" uid="uid://bqcxcu02ads2j" path="res://sim/content/stars/yellow_star.tres" id="6_2cfjh"]
+
+[resource]
+script = ExtResource("1_c7ieo")
+types = Array[ExtResource("2_1lkpu")]([ExtResource("3_mvyu5"), ExtResource("4_nob7x"), ExtResource("5_efeih"), ExtResource("6_2cfjh")])
+metadata/_custom_type_script = "uid://dauw4trs2xa54"

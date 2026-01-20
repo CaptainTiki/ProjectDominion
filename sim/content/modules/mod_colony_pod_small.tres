@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/cargo_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="CargoEffect" id="CargoEffect_1"]
+script = ExtResource("2")
+role = 1
+capacity = 0
+colonists_delivered = 100000
+transfer_rate = 0
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_COLONY_POD_SMALL"
+display_name = "Colony Pod (100k)"
+slot_type = 3
+production_cost = 4
+credit_cost = 60
+mass_delta = 0.5
+signature_delta = 0.2
+effect = SubResource("CargoEffect_1")
+description = "Delivers 100,000 colonists to establish a new settlement."

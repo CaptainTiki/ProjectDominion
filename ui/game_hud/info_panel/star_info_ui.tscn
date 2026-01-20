@@ -1,0 +1,140 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctd7fsy48g520"]
+
+[ext_resource type="Script" uid="uid://bjooloinyotpf" path="res://ui/game_hud/info_panel/star_info_ui.gd" id="1_starinfo"]
+
+[node name="StarInfoUI" type="PanelContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_starinfo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer/TitleRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selected"
+
+[node name="StarName" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Star Name"
+
+[node name="MetaRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TypeLabel" type="Label" parent="MarginContainer/VBoxContainer/MetaRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Type:"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/MetaRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="OwnerSwatch" type="ColorRect" parent="MarginContainer/VBoxContainer/MetaRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="OwnerLabel" type="Label" parent="MarginContainer/VBoxContainer/MetaRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Unclaimed"
+
+[node name="CapitalBadge" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CAPITAL"
+
+[node name="YieldsRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer/YieldsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CreditsLabel" type="Label" parent="MarginContainer/VBoxContainer/YieldsRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "C: 0"
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/YieldsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ResearchLabel" type="Label" parent="MarginContainer/VBoxContainer/YieldsRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "R: 0"
+
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer/YieldsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ProdLabel" type="Label" parent="MarginContainer/VBoxContainer/YieldsRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "P: 0"
+
+[node name="Spacer4" type="Control" parent="MarginContainer/VBoxContainer/YieldsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CoordsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "(x, y): ---"
+
+[node name="HSeparatorG" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GarrisonLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Garrison"
+
+[node name="GarrisonList" type="ItemList" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ActionsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Actions"
+
+[node name="ActionRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RenameBtn" type="Button" parent="MarginContainer/VBoxContainer/ActionRow"]
+layout_mode = 2
+text = "Rename"
+
+[node name="SendFleetBtn" type="Button" parent="MarginContainer/VBoxContainer/ActionRow"]
+layout_mode = 2
+text = "Send Fleet"

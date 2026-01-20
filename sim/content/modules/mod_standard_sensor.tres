@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/sensor_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="SensorEffect" id="SensorEffect_1"]
+script = ExtResource("2")
+passive_range_bonus = 1
+fleet_detail_tier_bonus = 0
+scan_range_bonus = 0
+scan_speed_bonus = 0
+enables_deep_scan = false
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_STANDARD_SENSOR"
+display_name = "Standard Sensor"
+slot_type = 2
+production_cost = 1
+credit_cost = 10
+mass_delta = 0.1
+signature_delta = 0.0
+effect = SubResource("SensorEffect_1")
+description = "Passive detection. No deep scan."

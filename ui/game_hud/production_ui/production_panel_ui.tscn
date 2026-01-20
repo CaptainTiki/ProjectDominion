@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://khi7wk15y0n2"]
+
+[ext_resource type="Script" uid="uid://dvg1ofw432mum" path="res://ui/game_hud/production_ui/production_panel_ui.gd" id="1_prod"]
+
+[node name="ProductionPanelUI" type="PanelContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -220.0
+offset_right = 340.0
+offset_bottom = 220.0
+mouse_filter = 2
+script = ExtResource("1_prod")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBox/Header"]
+layout_mode = 2
+text = "Production"
+
+[node name="StarLabel" type="Label" parent="VBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Select a star to build ships"
+horizontal_alignment = 2
+
+[node name="CloseBtn" type="Button" parent="VBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "X"
+
+[node name="Body" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShipList" type="ItemList" parent="VBox/Body"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Right" type="VBoxContainer" parent="VBox/Body"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CostLabel" type="Label" parent="VBox/Body/Right"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select a ship"
+
+[node name="StatsLabel" type="RichTextLabel" parent="VBox/Body/Right"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = true
+
+[node name="Buttons" type="HBoxContainer" parent="VBox/Body/Right"]
+layout_mode = 2
+
+[node name="Build1Btn" type="Button" parent="VBox/Body/Right/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Build x1"
+
+[node name="Build5Btn" type="Button" parent="VBox/Body/Right/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Build x5"
+
+[node name="QueueTitle" type="Label" parent="VBox/Body/Right"]
+layout_mode = 2
+text = "Queue"
+
+[node name="QueueList" type="ItemList" parent="VBox/Body/Right"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MessageLabel" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 2

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="HullDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://sim/data/hull_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"HULL_MEDIUM"
+display_name = "Medium Hull"
+hull_size = 1
+weapon_slots = 3
+armor_slots = 2
+sensor_slots = 1
+cargo_slots = 1
+engine_slots = 1
+production_cost = 25
+credit_cost = 50
+mass = 5.0
+signature = 3.0
+power_output = 10
+hull = 10
+attack = 0
+defense = 0
+speed = 3

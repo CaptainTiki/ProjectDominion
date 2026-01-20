@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ModuleDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://sim/data/module_def.gd" id="1"]
+[ext_resource type="Script" path="res://sim/data/modules/engine_effect.gd" id="2"]
+
+[sub_resource type="Resource" script_class="EngineEffect" id="EngineEffect_1"]
+script = ExtResource("2")
+grid_range_per_turn = 5
+
+[resource]
+script = ExtResource("1")
+id = &"MOD_QUANTUM_PLASMA"
+display_name = "Quantum Plasma Engine"
+slot_type = 4
+production_cost = 3
+credit_cost = 40
+mass_delta = 0.3
+signature_delta = 0.2
+power_delta = 1
+effect = SubResource("EngineEffect_1")
+description = "High-end drive for rapid redeploys. Loud, though."

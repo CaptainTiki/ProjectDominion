@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShipDef" load_steps=2 format=3 uid="uid://dkpurdfov42i1"]
+
+[ext_resource type="Script" uid="uid://y64bq8jkk0h4" path="res://sim/data/ship_def.gd" id="1_amhmj"]
+
+[resource]
+script = ExtResource("1_amhmj")
+id = &"COLONY"
+display_name = "Colony Ship"
+ship_class = 4
+production_cost = 28
+credit_cost = 37
+speed = 2
+metadata/_custom_type_script = "uid://y64bq8jkk0h4"
